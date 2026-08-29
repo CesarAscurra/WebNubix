@@ -1,58 +1,31 @@
-/* 1. Definición de la paleta de colores Nubix */
 :root {
-    --nubix-navy: #080B1A;
-    --nubix-purple: #7C3AED;
-    --nubix-blue: #2563EB;
-    --nubix-cyan: #22D3EE;
-    --nubix-blanco: #F8FAFC;
-    --nubix-slate: #64748B;
-    
-    /* El gradiente distintivo de la marca */
-    --nubix-gradient: linear-gradient(135deg, var(--nubix-purple), var(--nubix-blue), var(--nubix-cyan));
+  /* Fondos y Superficies */
+  --bg-navy-deep: #0B0F19;
+  --bg-surface: #141B2D;
+  --bg-document: #FAF8F5;
+
+  /* Identidad y Marca */
+  --brand-purple: #8B5CF6;
+  --brand-indigo: #3B82F6;
+
+  /* Detalles y Elementos Interactivos */
+  --accent-aqua: #38BDF8;
+
+  /* Tipografía y Textos */
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+
+  /* Gradiente Sugerido */
+  --gradient-main: linear-gradient(135deg, var(--brand-purple), var(--brand-indigo));
 }
 
-/* 2. Estilos globales del sitio */
-body {
-    background-color: var(--nubix-blanco); /* Fondo claro por defecto */
-    color: var(--nubix-navy); /* Texto oscuro para contraste */
+.bg-navy-nubix{
+    background-color: var(--bg-navy-deep) !important; 
+    margin-top: 15px;
+    opacity: 0.9;
 }
 
-/* 3. Utilidades para el Navbar y Fondos */
-.bg-nubix-navy {
-    background-color: var(--nubix-navy) !important;
-}
-
-/* Personalizar los enlaces del navbar para que usen tus colores */
-.navbar-dark .navbar-nav .nav-link {
-    color: var(--nubix-slate); /* Slate para los enlaces en reposo */
-    transition: color 0.3s ease;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-    color: var(--nubix-cyan); /* Cyan al pasar el mouse por encima */
-}
-
-/* 4. Componente: Botón Gradiente Nubix */
-.btn-nubix {
-    background: var(--nubix-gradient);
-    color: #ffffff; /* Texto blanco puro */
-    border: none;
-    font-weight: 500;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-nubix:hover {
-    color: #ffffff;
-    transform: translateY(-2px); /* Se levanta un poco al pasar el mouse */
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4); /* Sombra azul brillante */
-}
-
-/* 5. Utilidad: Texto con Gradiente (Ideal para Títulos Grandes) */
-.text-gradient {
-    background: var(--nubix-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline-block;
+body{
+    background-color: var(--bg-document);
+    color: var(--text-primary);
 }
