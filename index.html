@@ -12,26 +12,506 @@
 
 <body>
     <!-- Navigation -->
-    <header>
-        <nav class="bg-navy-nubix navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand">
-                    <img src="assets/logoNubix.png" alt="Nubix Logo" width="auto" height="30" class="d-inline-block align-text-top"> Nubix
+    <header class="main-header" id="mainHeader">
+        <nav class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/logoNubix.png" alt="Nubix Logo" class="nav-logo-img">
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" class="nav-link-item active">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link-item">Servicios</a></li>
+                <li><a href="#proyectos" class="nav-link-item">Proyectos</a></li>
+                <li><a href="#nosotros" class="nav-link-item">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-link-item">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#contacto" class="nav-cta">
+                    Cotizar Proyecto
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
                 </a>
             </div>
-            <div class="collapse navbar-collapse pe-3" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                </ul>
 
-            </div>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+
+        <div class="nav-mobile-menu" id="navMobileMenu">
+            <ul class="nav-mobile-links">
+                <li><a href="#inicio" class="nav-mobile-link active">Inicio</a></li>
+                <li><a href="#servicios" class="nav-mobile-link">Servicios</a></li>
+                <li><a href="#proyectos" class="nav-mobile-link">Proyectos</a></li>
+                <li><a href="#nosotros" class="nav-mobile-link">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-mobile-link">Contacto</a></li>
+            </ul>
+            <a href="#contacto" class="nav-mobile-cta">Cotizar Proyecto</a>
+        </div>
     </header>
-   
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="inicio">
+        <div class="hero-bg-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <span class="hero-badge">Soluciones Digitales a tu Medida</span>
+                    <h1 class="hero-title">
+                        Creamos <span class="gradient-text">Páginas Web</span> y 
+                        <span class="gradient-text">Software</span> que Impulsan tu Negocio
+                    </h1>
+                    <p class="hero-subtitle">
+                        Desarrollamos experiencias digitales excepcionales. Desde sitios web modernos y funcionales hasta 
+                        software personalizado que automatiza y optimiza tus procesos empresariales.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#contacto" class="btn btn-primary-hero">
+                            <span>Solicitar Presupuesto</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </a>
+                        <a href="#servicios" class="btn btn-outline-hero">
+                            Ver Servicios
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">50+</span>
+                            <span class="hero-stat-label">Proyectos Entregados</span>
+                        </div>
+                        <div class="hero-stat-divider"></div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">100%</span>
+                            <span class="hero-stat-label">Clientes Satisfechos</span>
+                        </div>
+                        <div class="hero-stat-divider"></div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">24/7</span>
+                            <span class="hero-stat-label">Soporte Técnico</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-visual">
+                    <div class="hero-visual-card">
+                        <div class="hero-card-header">
+                            <div class="hero-card-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="hero-card-code">
+                            <pre><code><span class="code-purple">const</span> <span class="code-aqua">nubix</span> = {
+  <span class="code-green">servicios</span>: [
+    <span class="code-string">"Desarrollo Web"</span>,
+    <span class="code-string">"Software a Medida"</span>,
+    <span class="code-string">"Apps Móviles"</span>
+  ],
+  <span class="code-green">mision</span>: <span class="code-string">"Transformar ideas en realidad digital"</span>,
+  <span class="code-purple">crear</span>: (<span class="code-orange">proyecto</span>) => {
+    <span class="code-purple">return</span> <span class="code-aqua">nubix</span>.desarrollar(proyecto);
+  }
+};</code></pre>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card hero-floating-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/>
+                        </svg>
+                        <span>Web Development</span>
+                    </div>
+                    <div class="hero-floating-card hero-floating-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M5.85 3.5a.5.5 0 0 0-.68-.07L2.5 5.9 2 6.48v1.02l.5.58.5-.58V7h1v4h1V7h1v4h1V7h1v4h1V7h1v4l.5.58.5-.58V6.48l-.5-.58L14.83 3.43a.5.5 0 0 0-.68.07L8 8.32 5.85 3.5Z"/>
+                        </svg>
+                        <span>Software Solutions</span>
+                    </div>
+                    <div class="hero-floating-card hero-floating-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Z"/>
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5ZM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1Z"/>
+                        </svg>
+                        <span>Entrega Puntual</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section servicios-section" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Lo que hacemos</span>
+                <h2 class="section-title">Nuestros <span class="text-purple">Servicios</span></h2>
+                <p class="section-subtitle">Ofrecemos soluciones completas para llevar tu negocio al siguiente nivel con tecnología de vanguardia.</p>
+            </div>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="servicio-title">Desarrollo Web</h3>
+                    <p class="servicio-desc">Sitios web modernos, responsivos y optimizados. Desde landing pages hasta plataformas complejas con las últimas tecnologías.</p>
+                    <a href="#contacto" class="servicio-link">Saber más →</a>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M5.85 3.5a.5.5 0 0 0-.68-.07L2.5 5.9 2 6.48v1.02l.5.58.5-.58V7h1v4h1V7h1v4h1V7h1v4h1V7h1v4l.5.58.5-.58V6.48l-.5-.58L14.83 3.43a.5.5 0 0 0-.68.07L8 8.32 5.85 3.5Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="servicio-title">Software a Medida</h3>
+                    <p class="servicio-desc">Aplicaciones personalizadas que automatizan procesos y resuelven problemas específicos de tu empresa o industria.</p>
+                    <a href="#contacto" class="servicio-link">Saber más →</a>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Z"/>
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5ZM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="servicio-title">Apps Móviles</h3>
+                    <p class="servicio-desc">Aplicaciones nativas e híbridas para iOS y Android que ofrecen una experiencia de usuario fluida e intuitiva.</p>
+                    <a href="#contacto" class="servicio-link">Saber más →</a>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.399l-.244 0-.082-.381 2.261-.502h.015z"/>
+                            <circle cx="8" cy="4.5" r="1"/>
+                        </svg>
+                    </div>
+                    <h3 class="servicio-title">Consultoría Tech</h3>
+                    <p class="servicio-desc">Asesoramiento estratégico para definir la arquitectura tecnológica, stack y roadmap de tu proyecto digital.</p>
+                    <a href="#contacto" class="servicio-link">Saber más →</a>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H4z"/>
+                            <path d="M9.5 3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H7v2h2.5a1.5 1.5 0 0 0 1.5-1.5v-4A1.5 1.5 0 0 0 9.5 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="servicio-title">UI/UX Design</h3>
+                    <p class="servicio-desc">Diseño de interfaces atractivas y experiencias de usuario intuitivas que convierten visitantes en clientes.</p>
+                    <a href="#contacto" class="servicio-link">Saber más →</a>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM4.5 7.5a.5.5 0 0 1 0-1h5.793L8.207 4.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L10.207 6.5H14.5a.5.5 0 0 1 0 1h-5.793l1.09 1.09a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708.708L7.707 6.5H4.5Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="servicio-title">DevOps & Deploy</h3>
+                    <p class="servicio-desc">Configuración de servidores, CI/CD, dominios, SSL y todo lo necesario para que tu proyecto esté online.</p>
+                    <a href="#contacto" class="servicio-link">Saber más →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="section proyectos-section" id="proyectos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestro trabajo</span>
+                <h2 class="section-title">Proyectos <span class="text-purple">Recientes</span></h2>
+                <p class="section-subtitle">Una selección de los proyectos que hemos desarrollado para nuestros clientes.</p>
+            </div>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-arrow carousel-prev" id="carouselPrev" aria-label="Anterior">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
+            </button>
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    <a href="https://demosmiledent.netlify.app/" target="_blank" class="project-card">
+                        <div class="project-card-img">
+                            <img src="assets/smildent.png" alt="Smile Dent" loading="lazy">
+                        </div>
+                        <div class="project-card-info">
+                            <span class="project-card-category">Sitio Web</span>
+                            <h3 class="project-card-title">Smile Dent</h3>
+                            <p class="project-card-desc">Clínica odontológica con sistema de reservas de citas y catálogo de tratamientos.</p>
+                            <span class="project-card-link">Ver Proyecto →</span>
+                        </div>
+                    </a>
+                    <a href="https://proyectoreal-state.netlify.app/" target="_blank" class="project-card">
+                        <div class="project-card-img">
+                            <img src="assets/realState.png" alt="Real State" loading="lazy">
+                        </div>
+                        <div class="project-card-info">
+                            <span class="project-card-category">Inmobiliaria</span>
+                            <h3 class="project-card-title">Real State</h3>
+                            <p class="project-card-desc">Portal inmobiliario con catálogo de propiedades, filtros de búsqueda y blog integrado.</p>
+                            <span class="project-card-link">Ver Proyecto →</span>
+                        </div>
+                    </a>
+                    <a href="https://proyecto-potcastfm.netlify.app/" target="_blank" class="project-card">
+                        <div class="project-card-img">
+                            <img src="assets/potcast.png" alt="Podcast FM" loading="lazy">
+                        </div>
+                        <div class="project-card-info">
+                            <span class="project-card-category">Plataforma</span>
+                            <h3 class="project-card-title">Podcast FM</h3>
+                            <p class="project-card-desc">Plataforma de podcasts con sistema de planes, estadísticas y distribución multiplataforma.</p>
+                            <span class="project-card-link">Ver Proyecto →</span>
+                        </div>
+                    </a>
+                    <a href="https://la-cafeteriaproyecto.netlify.app/" target="_blank" class="project-card">
+                        <div class="project-card-img">
+                            <img src="assets/cafe.png" alt="La Cafetería" loading="lazy">
+                        </div>
+                        <div class="project-card-info">
+                            <span class="project-card-category">Restaurante</span>
+                            <h3 class="project-card-title">La Cafetería</h3>
+                            <p class="project-card-desc">Sitio web de cafetería con menú digital, galería de fotos y sistema de reservaciones.</p>
+                            <span class="project-card-link">Ver Proyecto →</span>
+                        </div>
+                    </a>
+                    <a href="https://appcomida-proyecto.netlify.app/" target="_blank" class="project-card">
+                        <div class="project-card-img">
+                            <img src="assets/appComida.png" alt="AppComida" loading="lazy">
+                        </div>
+                        <div class="project-card-info">
+                            <span class="project-card-category">App de Delivery</span>
+                            <h3 class="project-card-title">AppComida</h3>
+                            <p class="project-card-desc">Aplicación de delivery con pedidos en línea, seguimiento de envíos y gestión de restaurantes.</p>
+                            <span class="project-card-link">Ver Proyecto →</span>
+                        </div>
+                    </a>
+                    <a href="https://nucleus-billetera.netlify.app/" target="_blank" class="project-card">
+                        <div class="project-card-img">
+                            <img src="assets/nucleus.png" alt="Nucleus" loading="lazy">
+                        </div>
+                        <div class="project-card-info">
+                            <span class="project-card-category">Fintech</span>
+                            <h3 class="project-card-title">Nucleus eWallet</h3>
+                            <p class="project-card-desc">Billetera digital con pagos, transferencias, autenticación biométrica y gestión de gastos.</p>
+                            <span class="project-card-link">Ver Proyecto →</span>
+                        </div>
+                    </a>
+                    <a href="https://bosque-arquitect.netlify.app/" target="_blank" class="project-card">
+                        <div class="project-card-img">
+                            <img src="assets/bosqueArquitectura.png" alt="Bosque Arquitectura" loading="lazy">
+                        </div>
+                        <div class="project-card-info">
+                            <span class="project-card-category">Arquitectura</span>
+                            <h3 class="project-card-title">Bosque Arquitectura</h3>
+                            <p class="project-card-desc">Sitio de estudio de arquitectura con catálogo de modelos, galería y formulario de contacto.</p>
+                            <span class="project-card-link">Ver Proyecto →</span>
+                        </div>
+                    </a>
+                    <a href="https://techpro-auricular.netlify.app/" target="_blank" class="project-card">
+                        <div class="project-card-img">
+                            <img src="assets/techpro.png" alt="TechPRO" loading="lazy">
+                        </div>
+                        <div class="project-card-info">
+                            <span class="project-card-category">E-Commerce</span>
+                            <h3 class="project-card-title">TechPRO Auriculares</h3>
+                            <p class="project-card-desc">Landing page de producto tech con secciones de features, precios y testimonios.</p>
+                            <span class="project-card-link">Ver Proyecto →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-arrow carousel-next" id="carouselNext" aria-label="Siguiente">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section class="section nosotros-section" id="nosotros">
+        <div class="container">
+            <div class="nosotros-grid">
+                <div class="nosotros-content">
+                    <span class="section-tag">Quiénes somos</span>
+                    <h2 class="section-title">Construimos el <span class="text-purple">futuro digital</span> de tu negocio</h2>
+                    <p class="nosotros-text">Somos un equipo de desarrolladores y diseñadores apasionados por crear soluciones tecnológicas que generan impacto real. Nuestra misión es transformar ideas en productos digitales que escalen.</p>
+                    <div class="nosotros-features">
+                        <div class="nosotros-feature">
+                            <div class="nosotros-feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                                </svg>
+                            </div>
+                            <span>Enfoque ágil y transparente</span>
+                        </div>
+                        <div class="nosotros-feature">
+                            <div class="nosotros-feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                                </svg>
+                            </div>
+                            <span>Tecnologías modernas y escalables</span>
+                        </div>
+                        <div class="nosotros-feature">
+                            <div class="nosotros-feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                                </svg>
+                            </div>
+                            <span>Soporte y mantenimiento continuo</span>
+                        </div>
+                        <div class="nosotros-feature">
+                            <div class="nosotros-feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                                </svg>
+                            </div>
+                            <span>Comprometidos con resultados</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-visual">
+                    <div class="nosotros-card">
+                        <div class="nosotros-card-number">50+</div>
+                        <div class="nosotros-card-label">Proyectos Entregados</div>
+                    </div>
+                    <div class="nosotros-card">
+                        <div class="nosotros-card-number">100%</div>
+                        <div class="nosotros-card-label">Clientes Satisfechos</div>
+                    </div>
+                    <div class="nosotros-card">
+                        <div class="nosotros-card-number">24/7</div>
+                        <div class="nosotros-card-label">Soporte Técnico</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section contacto-section" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Hablemos</span>
+                <h2 class="section-title">¿Tienes un <span class="text-purple">proyecto</span> en mente?</h2>
+                <p class="section-subtitle">Cuéntanos tu idea y te ayudaremos a convertirla en realidad. Respuesta garantizada en menos de 24 horas.</p>
+            </div>
+            <div class="contacto-grid">
+                <form class="contacto-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="servicio">Servicio de interés</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="web">Desarrollo Web</option>
+                            <option value="software">Software a Medida</option>
+                            <option value="app">App Móvil</option>
+                            <option value="consultoria">Consultoría Tech</option>
+                            <option value="diseno">UI/UX Design</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        Enviar Mensaje
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.209L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                        </svg>
+                    </button>
+                </form>
+                <div class="contacto-info">
+                    <div class="contacto-info-card">
+                        <div class="contacto-info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+595 985-285296</p>
+                        </div>
+                    </div>
+                    <div class="contacto-info-card">
+                        <div class="contacto-info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>nubix@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contacto-info-card">
+                        <div class="contacto-info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Asunción, Paraguay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <img src="assets/logoNubix.png" alt="Nubix Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-brand-desc">Creamos soluciones digitales que impulsannegocios. Desarrollo web, software y apps a medida.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Desarrollo Web</a></li>
+                        <li><a href="#servicios">Software a Medida</a></li>
+                        <li><a href="#servicios">Apps Móviles</a></li>
+                        <li><a href="#servicios">Consultoría Tech</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nubix. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
